@@ -10,13 +10,13 @@ const Todo = ({ todo, dispatch }) => {
   let [editTitle, setEditTitle] = useState(todo.title);
   let [editDescription, setEditDescription] = useState(todo.description);
   let [toggleContextMenu, setToggleContextMenu] = useState(false);
-  let ms = todo?.createdAt
-  
-  const date = new Date(ms)
-  const day = date.getDate()
-  const month = date.getMonth() + 1
-  const  year = date.getFullYear()
-  
+  let ms = todo?.createdAt;
+
+  const date = new Date(ms);
+  const day = date.getDate();
+  const month = date.getMonth() + 1;
+  const year = date.getFullYear();
+
   //Referencing the title and description input fields within the component so that we
   const removeTodo = (id) => {
     dispatch({ type: "REMOVE_TODO", payload: id });
@@ -46,13 +46,13 @@ const Todo = ({ todo, dispatch }) => {
     setToggleContextMenu(false);
   };
   const addToFavorite = (id) => {
-    dispatch({type:"ADD_FAVORITE", payload:id})
-    setToggleContextMenu(false)
-  }
+    dispatch({ type: "ADD_FAVORITE", payload: id });
+    setToggleContextMenu(false);
+  };
   return (
     <>
       <div className="todo relative border-[1px] border-gray-200 rounded-md p-4">
-        <h2 className="text-2xl flex items-center text-gray-700 font-semibold mb-2">
+        <h2 className="flex items-center text-gray-700 font-semibold mb-2">
           <span className={`${todo?.completed ? "line-through" : ""}`}>
             {todo.title}
           </span>
@@ -70,18 +70,29 @@ const Todo = ({ todo, dispatch }) => {
               </span>
             ) : (
               <span className="flex items-center">
-                <MdIncompleteCircle className="mr-2 animate-spin" /> <span>Pending</span>
+                <MdIncompleteCircle className="mr-2 animate-spin" />{" "}
+                <span>Pending</span>
               </span>
             )}
           </span>
-          {todo?.favorite ? <MdFavorite className="ml-2 text-red-500 cursor-pointer"/> : ""}
-            {todo?.createdAt ? <span className="text-sm text-gray-500 ml-4 font-thin">{`${day}/${month}/${year}`}</span> : ""}
+          {todo?.favorite ? (
+            <MdFavorite className="ml-2 text-red-500 cursor-pointer" />
+          ) : (
+            ""
+          )}
         </h2>
         <p className="text-sm text-gray-500">
           <span className={`${todo?.completed ? "line-through" : ""}`}>
             {todo.description}
           </span>
         </p>
+        <div className="mt-2">
+          {todo?.createdAt ? (
+            <span className="text-sm text-gray-500 font-thin">{`${day}/${month}/${year}`}</span>
+          ) : (
+            ""
+          )}
+        </div>
         <div className="actions flex gap-2">
           <button
             className="bg-red-300 py-1 hover:ring-2 text-red-600 ring-red-600 px-2 mt-6 rounded-md text-sm"
@@ -177,7 +188,10 @@ const Todo = ({ todo, dispatch }) => {
               toggleContextMenu ? "h-auto" : "h-0 overflow-hidden"
             }`}
           >
-            <li onClick={() => addToFavorite(todo.id)} className="p-2 text-sm hover:bg-gray-100 rounded-sm cursor-pointer">
+            <li
+              onClick={() => addToFavorite(todo.id)}
+              className="p-2 text-sm hover:bg-gray-100 rounded-sm cursor-pointer"
+            >
               <span className="flex items-center click-effect">
                 <MdFavorite className="mr-2" /> <span>Add to Favorite</span>
               </span>
