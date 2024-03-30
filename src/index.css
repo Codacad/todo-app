@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .bg-glass {
+    @apply rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 border border-gray-100;
+  }
+}
+@layer components {
+  .click-effect {
+    @apply focus:scale-90 active:scale-90;
+  }
+}

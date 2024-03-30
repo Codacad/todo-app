@@ -1,0 +1,9 @@
+.app{
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to right, rgba(255,255,255,.9), rgba(255,255,255,.7)), url('/todo_bg.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
