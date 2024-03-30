@@ -5,7 +5,7 @@ import { Toaster } from "react-hot-toast";
 function App() {
   return (
     <>
-      <div className="app md:p-8 relative">
+      <div className="app md:p-8 p-2 relative">
         <TodoContextProvider>
           <Todos />
           <Toaster

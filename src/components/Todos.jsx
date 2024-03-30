@@ -19,8 +19,11 @@ const Todos = () => {
                 ))}
             </div>
           ) : (
-            <div className="ex justify-start p-8 text-gray-500 border-gray-400 rounded-md bg-gray-200 border-[1px]">
-              <p>No tasks added yet</p>
+            <div className="flex flex-col justify-center items-center p-8 h-[100vh] text-gray-500 border-gray-400 rounded-md bg-gray-100 border-[1px]">
+              <p className="md:text-4xl text-md text-yellow-700 text-center">No todos added yet! Start by adding one now.</p>
+              <div className="w-[100%] h-[50%] bg-[url('/todos.svg')] bg-no-repeat bg-cover flex justify-center items-start">
+                
+              </div>
             </div>
           )}
         </div>

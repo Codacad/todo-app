@@ -28,16 +28,30 @@ export const todoReducer = (state, action) => {
     const updatedState = state.map((todo) =>
       todo.id === action.payload ? { ...todo, favorite: true } : todo
     );
-    return updatedState
+    return updatedState;
+  };
+  // Remove Favorite
+  const removeFavorite = () => {
+    const updatedState = state.map((todo) =>
+      todo.id === action.payload ? { ...todo, favorite: false } : todo
+    );
+    return updatedState;
   };
 
+  // Completed
   const completed = () => {
     let newState = state.map((todo) =>
       todo.id === action.payload ? { ...todo, completed: true } : todo
     );
     return newState;
   };
-
+  // Remove Completed
+  const removeCompleted = () => {
+    let newState = state.map((todo) =>
+      todo.id === action.payload ? { ...todo, completed: false } : todo
+    );
+    return newState;
+  };
   const actionHandler = {
     ADD_TODO: addTodo,
     REMOVE_TODO: removeTodo,
@@ -45,6 +59,8 @@ export const todoReducer = (state, action) => {
     SAVE_EDITING: saveEditing,
     ADD_FAVORITE: addToFavorite,
     COMPLETED: completed,
+    REMOVE_COMPLETED: removeCompleted,
+    REMOVE_FAVORITE: removeFavorite,
   };
 
   if (actionHandler[action.type]) {

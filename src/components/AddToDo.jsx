@@ -20,14 +20,14 @@ const AddToDo = ({state, dispatch}) => {
     <div className="addTodo max-md:mb-4 flex flex-col gap-4 col-span-3 lg:sticky top-0">
      
       <input
-        className="focus:ring-2 rounded-md px-4 py-1 focus:ring-purple-500 outline-none border-2 border-gray-300"
+        className="focus:ring-2 rounded-md px-4 py-1 focus:ring-blue-500 outline-none border-[1px] border-gray-300"
         type="text"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         autoFocus
       />
       <input
-        className="focus:ring-2 rounded-md px-4 py-1 focus:ring-purple-500 outline-none border-2 border-gray-300"
+        className="focus:ring-2 rounded-md px-4 py-1 focus:ring-blue-500 outline-none border-[1px] border-gray-300"
         type="text"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
@@ -43,7 +43,7 @@ const AddToDo = ({state, dispatch}) => {
             createdAt: new Date().getTime(),
           })
         }
-        className="bg-purple-800 px-2 py-2 focus:scale-95 active:scale-90 text-white rounded-md"
+        className="bg-blue-500 px-2 py-2 focus:scale-95 active:scale-90 text-white rounded-md"
       >
         Add Task
       </button>
