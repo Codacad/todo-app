@@ -2,6 +2,7 @@ import "./App.css";
 import Todos from "./components/Todos";
 import TodoContextProvider from "./context/todo-context/TodoContextProvider";
 import { Toaster } from "react-hot-toast";
+
 function App() {
   return (
     <>

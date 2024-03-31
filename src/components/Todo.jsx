@@ -96,7 +96,7 @@ const Todo = ({ todo, dispatch }) => {
   };
   return (
     <>
-      <div className="todo relative border-b-[1px] last:border-none border-gray-300 p-4">
+      <div className="todo relative bg-[rgba(0,0,0,.1)] rounded-xl border-b-[1px] last:border-none border-gray-300 p-4">
         <div className="flex items-center mb-4">
           <span
             className={`text-sm px-2 py-[1px] ${
