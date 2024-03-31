@@ -5,8 +5,8 @@ const manifestForPlugIn = {
   registerType:'prompt',
   includeAssests:['favicon.ico', "apple-touc-icon.png", "masked-icon.svg"],
   manifest:{
-    name:"React-vite-app",
-    short_name:"react-vite-app",
+    name:"Todo Application",
+    short_name:"Todo App",
     description:"I am a simple vite app",
     icons:[{
       src: '/android-chrome-192x192.png',
@@ -37,7 +37,7 @@ const manifestForPlugIn = {
   background_color:'#f0e7db',
   display:"standalone",
   scope:'/',
-  start_url:"/",
+  start_url:"/todo-app",
   orientation:'portrait'
   }
 }
