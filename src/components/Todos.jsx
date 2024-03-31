@@ -8,9 +8,8 @@ const Todos = () => {
 
   return (
     <>
-      <div className="todo-app md:p-8 p-2 rounded-md md:grid grid-cols-12 gap-4 bg-glass md:w-[70%] w-[100%] mx-auto">
-        <AddToDo state={state} dispatch={dispatch} />
-        <div className="todos w-[100%] min-h-[100vh] col-span-9">
+      <div className="todo-app md:p-8 p-2 rounded-md bg-glass md:w-[70%] w-[100%] mx-auto">
+        <div className="todos w-[100%] min-h-[100vh]">
           {state.length > 0 ? (
             <div className="flex flex-col gap-2">
               {state &&
@@ -27,6 +26,7 @@ const Todos = () => {
             </div>
           )}
         </div>
+        <AddToDo state={state} dispatch={dispatch} />
       </div>
     </>
   );
