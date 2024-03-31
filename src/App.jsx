@@ -5,7 +5,7 @@ import { Toaster } from "react-hot-toast";
 function App() {
   return (
     <>
-      <div className="app md:p-8 p-2 relative font-montserrat">
+      <div className="app md:p-8 p-2 bg-glass relative font-montserrat">
         <TodoContextProvider>
           <Todos />
           <Toaster

@@ -6,7 +6,7 @@ const AddToDo = ({ state, dispatch }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("")
   const addTask = (todo) => {
-    if (!title && !description) {
+    if (!title || !description) {
       toast.error("Please fill all fields!", {
         className: "bg-red-500",
       });
@@ -18,7 +18,7 @@ const AddToDo = ({ state, dispatch }) => {
     setDescription("")
   };
   return (
-    <div className="addTodo sticky bottom-0 w-[100%] mx-auto mt-8 p-2 shadow-2xl rounded-md max-md:mb-4 flex justify-between gap-4">
+    <div className="addTodo w-[100%] mx-auto mt-8 p-2 shadow-2xl rounded-md max-md:mb-4 flex justify-between gap-4">
       <input
         className="focus:ring-2 caret-blue-500 w-full rounded-md px-4 py-1 focus:ring-blue-500 outline-none border-[1px] border-gray-300"
         type="text"

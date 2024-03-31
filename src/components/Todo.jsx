@@ -96,7 +96,7 @@ const Todo = ({ todo, dispatch }) => {
   };
   return (
     <>
-      <div className="todo bg-gradient-to-r from-gray-200 to-gray-50 relative border-[1px] border-gray-200 rounded-md p-4">
+      <div className="todo relative border-b-[1px] last:border-none border-gray-300 p-4">
         <div className="flex items-center mb-4">
           <span
             className={`text-sm px-2 py-[1px] ${
@@ -177,11 +177,11 @@ const Todo = ({ todo, dispatch }) => {
           )}
         </div>
         <div
-          className={`edit-todo w-[100%] bg-transparent  ease-cubic transition-height duration-300 ${
+          className={`edit-todo w-[100%] bg-white rounded-md ease-cubic transition-height duration-300 ${
             isEdit ? "h-[100%]" : "h-[0] scale-0"
           }`}
         >
-          <div className="w-[100%] rounded-e-md p-6 mx-auto flex flex-col gap-4 shadow-2xl">
+          <div className="w-[100%] rounded-e-md mt-4 p-6 mx-auto flex flex-col gap-4 shadow-2xl">
             <h1 className="text-2xl text-gray-600 text-center">Edit Task</h1>
             <div className="group">
               <label for="title" class="block mb-2 text-sm font-medium">

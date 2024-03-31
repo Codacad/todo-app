@@ -3,11 +3,12 @@ import Todo from "./Todo";
 import toast from "react-hot-toast";
 import { TodoContext } from "../context/todo-context/TodoContext";
 import AddToDo from "./AddToDo";
+import { FcTodoList } from "react-icons/fc"
 const Todos = () => {
   const { state, dispatch } = useContext(TodoContext);
   return (
     <>
-      <div className="todo-app p-2 rounded-md bg-glass md:w-[70%] w-[100%] min-h[50vh] mx-auto">
+      <div className="todo-app p-2 rounded-md md:w-[70%] w-[100%] max-h[100vh] mx-auto">
         <div className="todos w-[100%] h-auto">
           {state.length > 0 ? (
             <div className="flex flex-col gap-2">
@@ -19,9 +20,7 @@ const Todos = () => {
           ) : (
             <div className="flex flex-col justify-center items-center p-8 text-gray-500 border-gray-400 rounded-md bg-gray-100 border-[1px]">
               <p className="md:text-4xl text-md text-yellow-700 text-center">No todos added yet! Start by adding one now.</p>
-              <div className="w-[100%] bg-[url('/todos.svg')] bg-no-repeat bg-cover flex justify-center items-start">
-                
-              </div>
+              <FcTodoList size={300} className="mt-8"/>
             </div>
           )}
         </div>
