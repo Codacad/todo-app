@@ -36,8 +36,8 @@ const manifestForPlugIn = {
   theme_color:'#171717',
   background_color:'#f0e7db',
   display:"standalone",
-  scope:'/todo-app',
-  start_url:"/todo-app",
+  scope:'/',
+  start_url:"/",
   orientation:'portrait'
   }
 }
@@ -47,5 +47,5 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  base: "/todo-app",
+  base: "./",
 });
