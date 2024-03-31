@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
-import * as serviceWorkerRegistration from './utils/serviceWorkerRegistration.js';
 
 import CounterContextProvider from "./context/counter-context/CounterContextProvider.jsx";
 
@@ -13,5 +12,3 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </CounterContextProvider>
   </React.StrictMode>
 );
-
-serviceWorkerRegistration.register();
