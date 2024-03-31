@@ -17,7 +17,7 @@ const AddToDo = ({state, dispatch}) => {
     setDescription("");
   };
   return (
-    <div className="addTodo sticky bottom-0 w-[50%] mx-auto mt-8 bg-glass p-2 shadow-lg rounded-md max-md:mb-4 flex flex-col gap-4">
+    <div className="addTodo sticky bottom-0 md:w-[50%] w-[100%] mx-auto mt-8 bg-glass p-2 shadow-lg rounded-md max-md:mb-4 flex flex-col gap-4">
       <h1 className="text-center text-2xl font-bold mt-4 text-gray-500">Add Task</h1>
       <input
         className="focus:ring-2 rounded-md px-4 py-1 focus:ring-blue-500 outline-none border-[1px] border-gray-300"
