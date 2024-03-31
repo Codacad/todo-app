@@ -12,7 +12,7 @@ export default defineConfig({
         name: "TODO App",
         short_name: "Todo App",
         description: "Description of your app",
-        start_url: "/",
+        start_url: "/todo-app",
         display: "standalone",
         background_color: "#ffffff",
         theme_color: "#ffffff",
