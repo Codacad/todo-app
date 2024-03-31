@@ -82,7 +82,7 @@ const Todo = ({ todo, dispatch }) => {
     });
   };
 
-  // Complete 
+  // Complete
   const complete = (id) => {
     setIsCompleted((prevIsComplete) => {
       const newIsComplete = !prevIsComplete;
@@ -97,12 +97,9 @@ const Todo = ({ todo, dispatch }) => {
   return (
     <>
       <div className="todo bg-gradient-to-r from-gray-200 to-gray-50 relative border-[1px] border-gray-200 rounded-md p-4">
-        <h2 className="flex items-center text-gray-700 font-semibold mb-2">
-          <span className={`${todo?.completed ? "line-through" : ""}`}>
-            {todo.title}
-          </span>
+        <div className="flex items-center mb-4">
           <span
-            className={`text-sm ml-4 px-2 py-[1px] ${
+            className={`text-sm px-2 py-[1px] ${
               todo?.completed
                 ? "bg-green-100 text-green-600 border border-green-500"
                 : "bg-yellow-100 border border-yellow-500 text-yellow-600"
@@ -141,6 +138,11 @@ const Todo = ({ todo, dispatch }) => {
               } shadow-sm cursor-pointer p-1 rounded-full text-white`}
             />
           </div>
+        </div>
+        <h2 className="flex items-center text-gray-700 font-semibold mb-2">
+          <span className={`${todo?.completed ? "line-through" : ""}`}>
+            {todo.title}
+          </span>
         </h2>
         <p className="text-sm text-gray-500">
           <span className={`${todo?.completed ? "line-through" : ""}`}>
