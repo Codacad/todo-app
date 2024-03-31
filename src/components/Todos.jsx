@@ -9,7 +9,7 @@ const Todos = () => {
   return (
     <>
       <div className="todo-app md:p-8 p-2 rounded-md bg-glass md:w-[70%] w-[100%] mx-auto">
-        <div className="todos w-[100%] min-h-[100vh]">
+        <div className="todos w-[100%] h-[100%]">
           {state.length > 0 ? (
             <div className="flex flex-col gap-2">
               {state &&
