@@ -54,8 +54,6 @@ const manifestForPlugIn = {
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), VitePWA(manifestForPlugIn)],
-  server: {
-    port: 3000,
-  },
+
   base: "/todo-app",
 });
